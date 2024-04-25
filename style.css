@@ -2,28 +2,53 @@
     padding: 0;
     margin: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
-#topo {
-    margin-right: 10%;
+body{
+    
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url('figure/Escarpas-do-Lago.jpg');
+    overflow: auto;
+    background-size: cover;
+    background-attachment: fixed; /* Mantém o plano de fundo fixo durante o scroll */
 }
+
+img{
+    width: 150px;
+}
+.logo{
+    width: 150px;
+    margin-left: 10%;
+}
+#topo{
+    background-color: white;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 1%;
+    padding: 1%;
+}
+
+
 
 #menu_horizontal {
     display: flex;
-    flex-direction: column-reverse;
+    flex-flow: row wrap;
     position: relative;
     width: 100%;
     top: 0;
     left: 0;
-    align-content: center;
+    justify-content: center;
     align-items: center;
 }
 
 #menu_horizontal ul {
     list-style: none; /*tira os marcadores*/
     padding: 0;
-    background-color: lightgray;
     text-align: center; /*alinhar os elementos na direita*/
+    flex-grow: 0.5;
     }
 
 #menu_horizontal ul li {
@@ -37,35 +62,124 @@
     text-decoration: none;
     font-size: 1.5rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px 15px;
+    display: block;
+    position: relative;
 }
 
-#menu_horizontal ul li a:hover {
-    background-color: gray;
-    opacity: 0.5;
-    /*opcional */
+#menu_horizontal ul li a:hover::after {
+    width: calc(100% - 30px);
+
 }
 
-#logo{
-    width: 80px;
+#menu_horizontal ul li a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}
+
+
+
+
+#corpo{
+    border-top: solid lightgray;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
 
 #s1 {
-    background-color: lightcoral;
-    background-image: url(./figure/Escarpas-do-Lago.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: white;
     display: flex;
+    flex-flow: column wrap;
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
+    box-sizing: border-box; /* Garante que o padding não aumente a largura da div */
+    max-width: 100vhs; /* Limita a largura máxima da div */
+    overflow-y: auto; /* Adiciona rolagem vertical quando o conteúdo excede a altura da div */
 }
+
+#s1 h1 {
+    font-size: 3rem;
+    margin-bottom: 20px; /* Adiciona margem inferior para separar o texto */
+}
+
+#s1 p {
+    font-size: 0.75rem;
+    margin: 10px 0; /* Adiciona margens para separar os parágrafos */
+}
+
+#s1 .items1 {
+    display: flex;
+    flex-flow: row ;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px; /* Adiciona espaçamento entre os itens */
+}
+
+
+#localiza {
+    text-align: center;
+    border-top: solid lightgray;
+    font-size: 0.75rem;
+    width: 100%;
+}
+
 
 #s2 {
     background-color: lightcyan;
+    display: flex;
+    flex-flow: column wrap;
+    position: relative;
+    width: 100%;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+    padding: 20px; 
+    box-sizing: border-box; /* Garante que o padding não aumente a largura da div */
+    overflow-y: auto; /* Adiciona rolagem vertical quando o conteúdo excede a altura da div */
 }
 
-#pe {
-    background-color: lightgray;
+#s2 .quartos{
+    display: flex;
+    padding: 2%;
+    gap: 10px;
 }
 
-div {
-    margin: auto;
+#rodape {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: black;    
 }
+
+#rodape li {
+    display: inline-block;
+    list-style: none;
+    flex-flow: row;
+}
+
+#rodape li p{
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px 15px;
+    display: block;
+    position: relative;
+}
+
+
