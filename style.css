@@ -252,6 +252,10 @@ button:hover {
 }
 
 
+#mockup{
+    width: 75%;
+}
+
 /* Responsividade: layout de duas colunas em telas menores */
 @media (max-width: 768px) {
     #reservas {
@@ -266,7 +270,9 @@ button:hover {
     #s1 .items1{
         flex-flow: column;
     } 
-
+#mockup{
+    width: 100%;
+}
 }
 
 @media (max-width: 700px){
