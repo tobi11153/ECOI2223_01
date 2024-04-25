@@ -262,4 +262,16 @@ button:hover {
         width: 100%; /* Ambas as colunas ocupam toda a largura em telas menores */
         margin-bottom: 20px;
     }
+
+    #s1 .items1{
+        flex-flow: column;
+    } 
+
+}
+
+@media (max-width: 700px){
+    #s2 .quartos{
+        flex-direction: column;
+    }
+
 }
