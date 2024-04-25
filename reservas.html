@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulário de Reserva</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
 </head>
-
 <body>
     <header id="topo">
-        <nav>
+        <nav id="menu_horizontal">
+            <img src="figure/logo.png" alt="logo da empreasa" class="logo">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="reservas.html">reservas</a></li>
-                <li><a href="motivacao.html">motivacao</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="motivacao.html">Motivação</a></li>
             </ul>
         </nav>
-        <img src="figure/414666fa-319f-4740-b1d8-57fff3e9a9ab.jpg" alt="Logo da empresa">
     </header>
-    <section id="s1">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-
-
-    </section>
-    <section id="s2">c</section>
-    <footer id="pe">d</footer>
+    <div id="corpo">
+        <section id="reservas">
+            <div class="form-container">
+                <h2>Formulário de Reserva</h2>
+                <form id="reservationForm">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+        
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+        
+                    <label for="checkin">Data de Check-in:</label>
+                    <input type="date" id="checkin" name="checkin" required>
+        
+                    <label for="checkout">Data de Check-out:</label>
+                    <input type="date" id="checkout" name="checkout" required>
+        
+                    <label for="guests">Número de Hóspedes:</label>
+                    <input type="number" id="guests" name="guests" min="1" required>
+        
+                    <button type="button" id="submitBtn">Enviar Reserva</button>
+                </form>
+            </div>
+            <div class="info-container">
+                <h2>Detalhes da Reserva</h2>
+                <div id="reservationDetails">
+                    <!-- Aqui serão exibidos os detalhes da reserva -->
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <ul id="rodape">
+            <li>
+                <p>CAPITOLIO POUSADA</p>
+            </li>
+            <li>
+                <p>Rua Avelino de Queiroz, 1</p>
+            </li>
+            <li>
+                <p>Contato: (XX) XXXX-XXXX | Email: pousada123@gmail.com</p>
+            </li>
+        </ul>
+    </footer>
 </body>
-
 </html>
